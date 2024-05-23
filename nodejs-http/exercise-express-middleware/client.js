@@ -4,7 +4,9 @@ const options = {
   port: 3000,
   hostname: 'localhost',
   path: '/users',
-  headers: {},
+  headers: {
+    authorization: 'secretpassword' // header que solicita el servidor para entregar el dato deseado
+  },
 };
 
 const req = http.get(options, (res) => {
